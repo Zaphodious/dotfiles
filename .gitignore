@@ -1,0 +1,7 @@
+# Ignore everything in the root
+/*
+# Un-ignore just the subtrees we want
+!/.vim/
+!.gitignore
+!.vimrc
+tags
