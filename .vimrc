@@ -6,6 +6,9 @@ set number
 syntax on
 filetype plugin indent on
 
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+
 " Paredit
 let g:paredit_mode = 0
 
@@ -19,5 +22,4 @@ set path+=**
 set wildmenu
 
 " File Browsing
-let g:netrw_liststyle=3
 

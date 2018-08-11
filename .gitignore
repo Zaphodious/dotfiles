@@ -3,7 +3,7 @@
 # Un-ignore just the subtrees we want
 !/.vim/
 !.gitignore
-!.vimrc
+!vimrc
 !README.md
 !zaph-install
 !zaph-commit
