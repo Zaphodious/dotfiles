@@ -5,7 +5,7 @@
 !.gitignore
 !.vimrc
 !README.md
-!zaph-update
+!zaph-install
 !zaph-commit
 # Ignore the stuff we don't want
 tags
