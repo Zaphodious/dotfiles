@@ -4,6 +4,8 @@
 !/.vim/
 !.gitignore
 !.vimrc
-tags
 !README.md
-!zaph-setup.sh
+!zaph-update
+!zaph-commit
+# Ignore the stuff we don't want
+tags

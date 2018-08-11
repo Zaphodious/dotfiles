@@ -9,15 +9,15 @@ Download the repo to your home directory, and run the setup script.
 
 ```
 git clone https://github.com/Zaphodious/dotfiles.git ~/
-chmod a+x ~/zaph-setup.sh
-chmod a+x ~/zaph-commit.sh
-~/zaph-setup.sh
+chmod a+x ~/zaph-update
+chmod a+x ~/zaph-commit
+~/zaph-setup
 ```
 
 Update, after pulling
 
-`~/zaph-setup.sh`
+`~/zaph-update`
 
 Run to commit and push all changes
 
-`~/zaph-commit.sh`
+`~/zaph-commit`
