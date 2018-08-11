@@ -1,0 +1,3 @@
+#!/bin/bash
+echo Adding $1 at .vim/bundle/$2
+git submodule add $1 .vim/bundle/$2
