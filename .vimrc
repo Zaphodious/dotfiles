@@ -12,3 +12,12 @@ let g:paredit_mode = 0
 autocmd BufRead,BufNewFile *.cljc setlocal filetype=clojure
 
 autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
+
+" Finding Files
+
+set path+=**
+set wildmenu
+
+" File Browsing
+let g:netrw_liststyle=3
+
