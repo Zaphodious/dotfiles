@@ -6,7 +6,9 @@ ln -rsf .vimrc ~/.vimrc
 
 
 # Get all the apt packages we'll need
-sudo apt-get --assume-yes install gcc neovim git python3 openjdk-8-jdk leiningen grep byobu glances openssh roxterm cargo
+sudo apt-get --assume-yes install unzip cargo rlwrap gcc git python3 openjdk-8-jdk grep byobu glances 
+
+sudo apt-get --assume-yes leiningen neovim
 
 # Install the rust compiler, which is a dependency for the best parinfer vim plugin on the market
 # Uncommont the following line if "cargo" didn't install via apt-get 
