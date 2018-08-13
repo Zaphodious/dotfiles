@@ -1,4 +1,4 @@
-#include ".Xresources-themes/iterm-Cobalt_Neon.Xresources"
+#include ".Xresources-themes/iterm-Espresso.Xresources"
 
 ! Use a nice truetype font and size by default... 
 xterm*faceName: DejaVu Sans Mono Book
