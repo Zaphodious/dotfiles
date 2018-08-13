@@ -24,5 +24,4 @@ autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 set path+=**
 set wildmenu
 
-" File Browsing
-
+let g:rainbow_active = 1
