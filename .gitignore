@@ -10,5 +10,7 @@
 !zaph-add-plugin
 !Xresources-themes
 !.Xresources
+!begin
+!begin-outside
 # Ignore the stuff we don't want
 tags

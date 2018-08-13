@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export XENVIRONMENT="${HOME}/.Xresources"
+xiwi xterm

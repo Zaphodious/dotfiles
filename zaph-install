@@ -5,7 +5,8 @@ ln -rsf .vim ~/.vim
 ln -rsf .vimrc ~/.vimrc
 ln -rsf .Xresources ~/.Xresources
 ln -rsf Xresources-themes ~/.Xresources-themes
-
+ln -rsf begin /bin/begin
+sudo chmod a+x /bin/begin
 
 # Get all the apt packages we'll need
 sudo apt-get --assume-yes install unzip cargo rlwrap gcc git python3 openjdk-8-jdk grep byobu glances 
