@@ -8,5 +8,7 @@
 !zaph-install
 !zaph-commit
 !zaph-add-plugin
+!Xresources-themes
+!.Xresources
 # Ignore the stuff we don't want
 tags

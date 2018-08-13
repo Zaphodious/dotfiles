@@ -3,6 +3,8 @@
 # Make simlinks
 ln -rsf .vim ~/.vim
 ln -rsf .vimrc ~/.vimrc
+ln -rsf .Xresources ~/.Xresources
+ln -rsf Xresources-themes ~/.Xresources-themes
 
 
 # Get all the apt packages we'll need
