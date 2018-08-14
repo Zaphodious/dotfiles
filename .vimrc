@@ -2,7 +2,7 @@
 " runtime bundle/vim-pathogen/autoload-pathogen.vim
 set nocompatible
 call pathogen#infect() 
-set number
+set number relativenumber
 syntax on
 filetype plugin indent on
 
