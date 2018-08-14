@@ -1,6 +1,7 @@
 #!/bin/bash -x
 
 # Make simlinks/copy files
+mkdir ~/.config
 mkdir ~/.config/nvim
 sudo ln -rsf init.vim ~/.config/nvim/init.vim
 sudo ln -rsf .Xresources ~/.Xresources
