@@ -23,7 +23,7 @@ sudo ./linux-install-1.9.0.391.sh
 sudo rm linux-install-1.9.0.391.sh
 
 # Install plugins with vundle
-sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # Build parinfer-rust
