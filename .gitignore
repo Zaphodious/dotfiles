@@ -10,5 +10,6 @@
 !.Xresources
 !begin
 !begin-outside
+!windows-ctrl.ahk
 # Ignore the stuff we don't want
 tags
