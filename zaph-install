@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-# Make simlinks
+# Make simlinks/copy files
 sudo ln -rsf .vimrc ~/.vimrc
 sudo ln -rsf .Xresources ~/.Xresources
 sudo ln -rsf Xresources-themes ~/.Xresources-themes
@@ -11,7 +11,8 @@ sudo chmod a+x /bin/begin
 # Get all the apt packages we'll need
 sudo apt-get --assume-yes install unzip cargo rlwrap gcc git python3 openjdk-8-jdk grep byobu glances 
 
-sudo apt-get --assume-yes leiningen neovim
+sudo apt-get --assume-yes neovim
+sudo apt-get --assume-yes leiningen 
 
 # Install the rust compiler, which is a dependency for the best parinfer vim plugin on the market
 # Uncommont the following line if "cargo" didn't install via apt-get 
