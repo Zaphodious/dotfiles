@@ -4,6 +4,7 @@
 !.gitignore
 !init.vim
 !README.md
+!zaph-*
 !zaph-install
 !zaph-commit
 !Xresources-themes
