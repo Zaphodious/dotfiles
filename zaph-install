@@ -31,6 +31,6 @@ sudo ./linux-install-1.9.0.391.sh
 sudo rm linux-install-1.9.0.391.sh
 
 # Make neovim the default, and install plugins 
-bash map-nvim
+bash zaph-map-nvim
 bash zaph-install-plugins
 
