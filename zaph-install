@@ -1,7 +1,8 @@
 #!/bin/bash -x
 
 # Make simlinks/copy files
-sudo ln -rsf .vimrc ~/.config/nvim/.vimrc
+mkdir ~/.config/nvim
+sudo ln -rsf init.vim ~/.config/nvim/init.vim
 sudo ln -rsf .Xresources ~/.Xresources
 sudo ln -rsf Xresources-themes ~/.Xresources-themes
 sudo ln -rsf begin /bin/begin
@@ -16,8 +17,8 @@ sudo apt-get --assume-yes update
 sudo apt-get --assume-yes install python-dev python-pip python3-dev python3-pip python3
 sudo apt-get --assume-yes install unzip cargo rlwrap gcc git openjdk-8-jdk grep byobu glances 
 
-sudo apt-get --assume-yes neovim
-sudo apt-get --assume-yes leiningen 
+sudo apt-get --assume-yes install neovim
+sudo apt-get --assume-yes install leiningen 
 
 # Install the rust compiler, which is a dependency for the best parinfer vim plugin on the market
 # Uncommont the following line if "cargo" didn't install via apt-get 
@@ -29,18 +30,7 @@ sudo chmod +x linux-install-1.9.0.391.sh
 sudo ./linux-install-1.9.0.391.sh
 sudo rm linux-install-1.9.0.391.sh
 
-# Install plugins with vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
-sudo update-alternatives --config vi
-sudo update-alternatives --install /usr/bin/vim vi /usr/bin/nvim 60
-sudo update-alternatives --config vim
-sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
-sudo update-alternatives --config editor
-vim +PluginInstall +qall
-
-# Build parinfer-rust
-cd ~/.vim/bundle/parinfer-rust
-sudo cargo build --release
-cd ~/dotfiles
+# Make neovim the default, and install plugins 
+bash map-nvim
+bash zaph-install-plugins
 

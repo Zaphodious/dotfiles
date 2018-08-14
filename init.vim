@@ -21,13 +21,14 @@ Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'ervandew/supertab'
 Plugin 'https://github.com/tpope/vim-commentary.git'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'https://gitlab.com/Lenovsky/nuake.git'
 
 call vundle#end()
 
 syntax on
 filetype plugin indent on
 
-colorscheme anderson
+colorscheme alduin
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -55,3 +56,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+nnoremap <C-i> :Nuake<CR>
+inoremap <C-i> <C-\><C-n>:Nuake<CR>
+tnoremap <C-i> <C-\><C-n>:Nuake<CR>
