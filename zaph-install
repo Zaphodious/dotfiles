@@ -1,11 +1,10 @@
 #!/bin/bash -x
 
 # Make simlinks
-ln -rsf .vim ~/.vim
-ln -rsf .vimrc ~/.vimrc
-ln -rsf .Xresources ~/.Xresources
-ln -rsf Xresources-themes ~/.Xresources-themes
-ln -rsf begin /bin/begin
+sudo ln -rsf .vimrc ~/.vimrc
+sudo ln -rsf .Xresources ~/.Xresources
+sudo ln -rsf Xresources-themes ~/.Xresources-themes
+sudo ln -rsf begin /bin/begin
 sudo chmod a+x /bin/begin
 
 # Get all the apt packages we'll need
@@ -19,15 +18,16 @@ sudo apt-get --assume-yes leiningen neovim
 
 # Install the clojure CLI tools
 curl -O https://download.clojure.org/install/linux-install-1.9.0.391.sh
-chmod +x linux-install-1.9.0.391.sh
+sudo chmod +x linux-install-1.9.0.391.sh
 sudo ./linux-install-1.9.0.391.sh
 sudo rm linux-install-1.9.0.391.sh
 
-# Build parinfer-rust
-cd .vim/bundle/parinfer-rust
-cargo build --release
-cd ../../../ 
+# Install plugins with vundle
+sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
-# Set the default editor to be Vim
-export VISUAL=vim
-export EDITOR="$VISUAL"
+# Build parinfer-rust
+cd ~/.vim/bundle/parinfer-rust
+sudo cargo build --release
+cd ~/dotfiles
+

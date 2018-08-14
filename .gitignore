@@ -1,13 +1,11 @@
 # Ignore everything in the root
 /*
 # Un-ignore just the subtrees we want
-!/.vim/
 !.gitignore
-!vimrc
+!.vimrc
 !README.md
 !zaph-install
 !zaph-commit
-!zaph-add-plugin
 !Xresources-themes
 !.Xresources
 !begin
