@@ -4,6 +4,7 @@ set nocompatible
 " call pathogen#infect() 
 set number relativenumber
 
+" Begin executing Vundle script
 filetype off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
@@ -24,10 +25,13 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'https://gitlab.com/Lenovsky/nuake.git'
 
 call vundle#end()
+" Now that Vundle is over, we can make things look pretty again
 
 syntax on
 filetype plugin indent on
 
+" If the plugins are installed, it will use alduin. If not, elflord
+colorscheme elflord
 colorscheme alduin
 
 let g:netrw_banner = 0
@@ -60,3 +64,7 @@ au Syntax * RainbowParenthesesLoadBraces
 nnoremap <C-i> :Nuake<CR>
 inoremap <C-i> <C-\><C-n>:Nuake<CR>
 tnoremap <C-i> <C-\><C-n>:Nuake<CR>
+nnoremap <C-c> :q<CR>
+inoremap <C-c> <C-\><C-n>:q<CR>
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-\><C-n>:w<CR>
