@@ -32,6 +32,7 @@ filetype plugin indent on
 
 " If the plugins are installed, it will use alduin. If not, elflord
 colorscheme elflord
+let g:alduin_Shout_Dragon_Aspect = 1
 colorscheme alduin
 
 let g:netrw_banner = 0
