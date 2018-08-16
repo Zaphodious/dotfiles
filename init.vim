@@ -23,6 +23,8 @@ Plugin 'ervandew/supertab'
 Plugin 'https://github.com/tpope/vim-commentary.git'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'https://gitlab.com/Lenovsky/nuake.git'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 " Now that Vundle is over, we can make things look pretty again
@@ -56,6 +58,8 @@ set wildmenu
 let g:rbpt_max = 16
 
 let g:rbpt_loadcmd_toggle = 0
+
+let g:airline#extensions#tabline#enabled = 1
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
