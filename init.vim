@@ -25,6 +25,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'https://gitlab.com/Lenovsky/nuake.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'gabrielelana/vim-markdown'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 " Now that Vundle is over, we can make things look pretty again
@@ -42,6 +44,8 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
+
+let g:markdown_enable_spell_checking = 0
 
 " Paredit
 let g:paredit_mode = 0
@@ -73,3 +77,8 @@ nnoremap <C-c> :q<CR>
 inoremap <C-c> <C-\><C-n>:q<CR>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <C-\><C-n>:w<CR>
+
+nnoremap <C-h> <C-w>h 
+nnoremap <C-j> <C-w>j 
+nnoremap <C-k> <C-w>k 
+nnoremap <C-l> <C-w>l 
