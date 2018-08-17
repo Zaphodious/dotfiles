@@ -7,6 +7,7 @@ sudo ln -rsf init.vim ~/.config/nvim/init.vim
 sudo ln -rsf .Xresources ~/.Xresources
 sudo ln -rsf Xresources-themes ~/.Xresources-themes
 sudo ln -rsf begin /bin/begin
+sudo mkdir /mnt/c/autohot
 sudo cp windows-ctrl.ahk /mnt/c/autohot/
 sudo chmod a+x /bin/begin
 

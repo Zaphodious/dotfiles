@@ -1,6 +1,7 @@
 #/bin/bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 
+vim +PluginClean +qall
 vim +PluginInstall +qall
 
 # Build parinfer-rust

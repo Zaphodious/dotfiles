@@ -18,15 +18,15 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-vinegar'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'eraserhd/parinfer-rust'
-Plugin 'https://github.com/tpope/vim-fugitive.git'
+" Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'ervandew/supertab'
 Plugin 'https://github.com/tpope/vim-commentary.git'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'https://gitlab.com/Lenovsky/nuake.git'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'gabrielelana/vim-markdown'
-Plugin 'godlygeek/tabular'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'gabrielelana/vim-markdown'
+" Plugin 'godlygeek/tabular'
 
 call vundle#end()
 " Now that Vundle is over, we can make things look pretty again
@@ -69,6 +69,8 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+syntax match clojureSymbol "*"
 
 nnoremap <C-i> :Nuake<CR>
 inoremap <C-i> <C-\><C-n>:Nuake<CR>
