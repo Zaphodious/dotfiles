@@ -3,10 +3,12 @@
 # Make simlinks/copy files
 mkdir ~/.config
 mkdir ~/.config/nvim
+mkdir ~/.config/nvim/colors
 sudo ln -rsf init.vim ~/.config/nvim/init.vim
 sudo ln -rsf .Xresources ~/.Xresources
 sudo ln -rsf Xresources-themes ~/.Xresources-themes
 sudo ln -rsf begin /bin/begin
+sudo ln -rsf darcula.vim ~/.config/nvim/colors
 sudo mkdir /mnt/c/autohot
 sudo cp windows-ctrl.ahk /mnt/c/autohot/
 sudo chmod a+x /bin/begin

@@ -21,7 +21,10 @@ Plugin 'eraserhd/parinfer-rust'
 Plugin 'https://github.com/tpope/vim-fugitive.git'
 Plugin 'ervandew/supertab'
 Plugin 'https://github.com/tpope/vim-commentary.git'
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
+Plugin 'https://github.com/xolox/vim-reload.git'
+Plugin 'https://github.com/xolox/vim-misc.git'
+Plugin 'zaphodious/alduin'
 Plugin 'https://gitlab.com/Lenovsky/nuake.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -37,7 +40,9 @@ filetype plugin indent on
 " If the plugins are installed, it will use alduin. If not, elflord
 colorscheme elflord
 let g:alduin_Shout_Dragon_Aspect = 1
-colorscheme alduin
+let g:alduin_Shout_Unrelenting_Force = 1
+" colorscheme alduin
+colorscheme darcula
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -84,3 +89,5 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j 
 nnoremap <C-k> <C-w>k 
 nnoremap <C-l> <C-w>l 
+
+nnoremap cqr :%Eval<CR>
