@@ -85,6 +85,8 @@ inoremap <C-c> <C-\><C-n>:q<CR>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <C-\><C-n>:w<CR>
 
+inoremap jk <Esc>
+
 nnoremap <C-h> <C-w>h 
 nnoremap <C-j> <C-w>j 
 nnoremap <C-k> <C-w>k 
