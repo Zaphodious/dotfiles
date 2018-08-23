@@ -13,5 +13,6 @@
 !begin-outside
 !windows-ctrl.ahk
 !darcula.vim
+!i3
 # Ignore the stuff we don't want
 tags
