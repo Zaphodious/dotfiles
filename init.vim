@@ -30,6 +30,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'godlygeek/tabular'
+Plugin 'jonsmithers/experimental-lit-html-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'https://github.com/wesQ3/vim-windowswap'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call vundle#end()
 " Now that Vundle is over, we can make things look pretty again
@@ -69,6 +73,12 @@ let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
 let g:airline#extensions#tabline#enabled = 1
+
+
+let g:javascript_conceal_arrow_function       = "⇒"
+set conceallevel=1
+
+let g:deoplete#enable_at_startup = 1
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
