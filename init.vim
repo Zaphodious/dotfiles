@@ -40,6 +40,8 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " If the plugins are installed, it will use alduin. If not, elflord
 colorscheme elflord
@@ -103,3 +105,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l 
 
 nnoremap cqr :%Eval<CR>
+
+inoremap m<Tab> <C-X><C-o>
+nnoremap m<Tab> a<C-X><C-o>
