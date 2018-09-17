@@ -26,6 +26,9 @@ sudo apt-get --assume-yes install unzip cargo rlwrap gcc git openjdk-8-jdk grep 
 sudo apt-get --assume-yes install neovim
 sudo apt-get --assume-yes install leiningen 
 
+sudo apt-get --assume-yes install npm
+
+sudo npm install -g simple-autoreload-server
 # Install the rust compiler, which is a dependency for the best parinfer vim plugin on the market
 # Uncommont the following line if "cargo" didn't install via apt-get 
 # curl https://sh.rustup.rs -sSf | sh
