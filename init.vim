@@ -34,6 +34,7 @@ Plugin 'jonsmithers/experimental-lit-html-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'https://github.com/wesQ3/vim-windowswap'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plugin 'vim-scripts/indentpython.vim'
 
 call vundle#end()
 " Now that Vundle is over, we can make things look pretty again
