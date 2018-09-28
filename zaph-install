@@ -33,6 +33,8 @@ sudo apt-get --assume-yes install npm
 
 sudo apt-get --assume-yes install xfce4-screenshooter gimp
 
+sudo apt-get --assume-yes install build-essential cmake python3-dev
+
 sudo npm install -g simple-autoreload-server
 # Install the rust compiler, which is a dependency for the best parinfer vim plugin on the market
 # Uncommont the following line if "cargo" didn't install via apt-get 

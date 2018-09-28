@@ -110,5 +110,8 @@ nnoremap cqr :%Eval<CR>
 inoremap m<Tab> <C-X><C-o>
 nnoremap m<Tab> a<C-X><C-o>
 
-nnoremap gwa :+0,+0w !cat - >> tmpout<CR>j
-nnoremap gwd :+0,+0w !cat - >> tmpdel<CR>dd
+nnoremap ,. :call writefile(split(@@, "\n", 1), '/tmp/vimyank.tmp')<CR>
+nnoremap ,m :let @" = join(readfile("/tmp/vimyank.tmp"), "\n")<CR> 
+
+nnoremap gwa :.w !cat - >> tmpout<CR>j
+nnoremap gwd :.w !cat - >> tmpdel<CR>dd
