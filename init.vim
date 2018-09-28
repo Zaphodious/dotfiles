@@ -109,3 +109,6 @@ nnoremap cqr :%Eval<CR>
 
 inoremap m<Tab> <C-X><C-o>
 nnoremap m<Tab> a<C-X><C-o>
+
+nnoremap gwa :+0,+0w !cat - >> tmpout<CR>j
+nnoremap gwd :+0,+0w !cat - >> tmpdel<CR>dd
