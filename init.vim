@@ -111,6 +111,7 @@ inoremap m<Tab> <C-X><C-o>
 nnoremap m<Tab> a<C-X><C-o>
 
 nnoremap ,. :call writefile(split(@@, "\n", 1), '/tmp/vimyank.tmp')<CR>
+nnoremap ,, :call writefile(split(@@, "\n", 1), 'vimyank.tmp')<CR>
 nnoremap ,m :let @" = join(readfile("/tmp/vimyank.tmp"), "\n")<CR> 
 
 nnoremap gwa :.w !cat - >> tmpout<CR>j
