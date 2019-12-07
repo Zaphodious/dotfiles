@@ -1,4 +1,4 @@
 #!/bin/bash
 
 export XENVIRONMENT="${HOME}/.Xresources"
-xiwi xterm
+export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"

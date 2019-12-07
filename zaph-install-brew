@@ -1,4 +1,3 @@
-sudo apt-get install curl -a
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-
+sudo apt-get install curl -y
+sudo apt install linuxbrew-wrapper -y
 
