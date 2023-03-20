@@ -1,7 +1,0 @@
-#!/bin/bash
-
-echo Set the screens
-sudo bash screenlayout/layout.sh
-
-echo Set the caps lock to be mod
-sudo xmodmap i3/capslockas.Xmodmap

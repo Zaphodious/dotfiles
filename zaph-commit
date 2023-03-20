@@ -1,7 +1,0 @@
-#!/bin/bash
-
-export VISUAL=vim
-export EDITOR="$VISUAL"
-git add .
-git commit
-git push

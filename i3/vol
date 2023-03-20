@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo Opening up Pavucontrol
-pavucontrol

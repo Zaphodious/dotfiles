@@ -1,8 +1,0 @@
-#!/bin/bash
-
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
-sudo update-alternatives --config vi
-sudo update-alternatives --install /usr/bin/vim vi /usr/bin/nvim 60
-sudo update-alternatives --config vim
-sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-export XENVIRONMENT="${HOME}/.Xresources"
-export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
