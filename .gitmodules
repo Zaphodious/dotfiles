@@ -1,9 +1,0 @@
-[submodule ".vim/bundle/vim-vinegar"]
-	path = .vim/bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar.git
-[submodule ".vim/bundle/vim-sensible"]
-	path = .vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
-[submodule "Xresources-themes"]
-	path = Xresources-themes
-	url = https://github.com/logico-dev/Xresources-themes.git
