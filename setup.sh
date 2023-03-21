@@ -23,9 +23,14 @@ then
 nix-env --install curl
 fi
 
+if ! command -v gcc &> /dev/null && [[ $OSTYPE != 'darwin' ]];
+then
+    nix-env --install gcc
+fi
+
 if ! command -v python3 &> /dev/null
 then
-nix-env --install curl
+nix-env --install python3
 fi
 
 if ! command -v cargo &> /dev/null
@@ -43,6 +48,8 @@ bob use 0.8.3
 fi
 
 # Install Packer
-[ -d "~/.local/share/nvim/site/pack/packer/start" ] && git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
+if [ -d "~/.local/share/nvim/site/pack/packer/start" ] 
+then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
 
