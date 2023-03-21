@@ -23,6 +23,11 @@ then
 nix-env --install curl
 fi
 
+if ! command -v javac &> /dev/null
+then
+nix-env --install openjdk
+fi
+
 if ! command -v gcc &> /dev/null && [[ $OSTYPE != 'darwin' ]];
 then
     nix-env --install gcc
