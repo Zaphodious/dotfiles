@@ -24,4 +24,7 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
-vim.keymap.set("<leader>gg"
+vim.keymap.set("n", "<leader>G", function()
+    vim.cmd(":Git add .")
+    vim.cmd(":Git commit")
+end)
