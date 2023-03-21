@@ -1,4 +1,6 @@
-print("remaps are being called")
+-- Remaps are in after/plugin/ because for some rason
+-- they weren't working when included in the usual
+-- source path. Stupid, but whatever, it works.
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>ss", vim.cmd.PackerSync)
@@ -26,4 +28,3 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
-print("remaps have been called")
