@@ -1,3 +1,5 @@
+print("remaps are being called")
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>ss", vim.cmd.PackerSync)
 
@@ -24,10 +26,4 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
-vim.keymap.set("n", "<leader>gc", function()
-    vim.cmd(":Git add .")
-    vim.cmd(":Git commit")
-end)
-vim.keymap.set("n", "<leader>gp", function()
-    vim.cmd(":Git push")
-end)
+print("remaps have been called")

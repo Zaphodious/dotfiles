@@ -36,7 +36,7 @@ fi
 if ! command -v cargo &> /dev/null
 then
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-else
+elseDejaVu Sans Mono Book
     rustup update
 fi
 

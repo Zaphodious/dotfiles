@@ -1,7 +1,7 @@
 #include ".Xresources-themes/iterm-Espresso.Xresources"
 
 ! Use a nice truetype font and size by default... 
-xterm*faceName: DejaVu Sans Mono Book
+xterm*faceName: Hasklug Nerd Font Mono
 xterm*faceSize: 11
 
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
