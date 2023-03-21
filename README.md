@@ -2,7 +2,7 @@
 
 Remade in 2023.
 
-1. Clone this repo to `~/dotfiles`. The the position right under the 
+1. Clone this repo to `~/dotfiles`. The position right under the 
 home directory is important.
 
 2. Run the setup.sh script. For each thing that it installs,
