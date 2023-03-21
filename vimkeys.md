@@ -1,8 +1,8 @@
 # NeoVim Remaps 
 
 This is a non-exhaustive list. For futher remaps, see 
-./nvim/.config/nvim/lua/zaph/remap.lua and files in
-./nvim/.config/nvim/after/plugin/
+[a relative link](nvim/.config/nvim/lua/zaph/remap.lua) and files in
+[a relative link](nvim/.config/nvim/after/plugin/)
 
 | Keys | Description |
 | --- | --- |
@@ -12,7 +12,6 @@ This is a non-exhaustive list. For futher remaps, see
 
 | Keys | Description |
 | --- | --- |
-| <td colspan=1> **Quicknav**</td> |
 | <Leader>pv | Switch to file view |
 | <Leader>pf | Switch to fuzzy finder |
 
@@ -32,3 +31,18 @@ This is a non-exhaustive list. For futher remaps, see
 | <Leader>t2 | Harpoon Terminal 2 |
 | <Leader>t3 | Harpoon Terminal 3 |
 | <Leader>t4 | Harpoon Terminal 4 |
+
+**Git**
+
+| Keys | Description |
+| --- | --- |
+| <Leader>gc | Git add. && Git commit |
+| <Leader>gp | Git push |
+
+**Misc**
+
+| Keys | Description |
+| --- | --- |
+| <Leader>s | Replace text matches under cursor |
+| <Leader>f | Formats buffer using language server |
+| <Leader>ss | Packer Syncs |
