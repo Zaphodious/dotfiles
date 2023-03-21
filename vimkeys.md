@@ -9,7 +9,7 @@ This is a non-exhaustive list. For futher remaps, see
 | Space | Leader |
 | <Leader>pv | Switch to file view |
 | <Leader>pf | Switch to fuzzy finder |
-|   |   |
+| ---  | --- |
 | <Leader>hh | Harpoon Dashboard |
 | <Leader>ha | Harpoon Mark Buffer |
 | <Leader>jj | Harpoon Next Marked Buffer |
