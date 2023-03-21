@@ -1,0 +1,25 @@
+# NeoVim Remaps
+
+This is a non-exhaustive list. For futher remaps, see 
+./nvim/.config/nvim/lua/zaph/remap.lua and files in
+./nvim/.config/nvim/after/plugin/
+
+| Keys | Description |
+| --- | --- |
+| Space | Leader |
+| <Leader>pv | Switch to file view |
+| <Leader>pf | Switch to fuzzy finder |
+|   |   |
+| <Leader>hh | Harpoon Dashboard |
+| <Leader>ha | Harpoon Mark Buffer |
+| <Leader>jj | Harpoon Next Marked Buffer |
+| <Leader>kk | Harpoon Previous Marked Buffer |
+| <Leader>1 | Harpoon File 1 |
+| <Leader>2 | Harpoon File 2 |
+| <Leader>3 | Harpoon File 3 |
+| <Leader>4 | Harpoon File 4 |
+| <Leader>t1 | Harpoon Terminal 1 |
+| <Leader>t2 | Harpoon Terminal 2 |
+| <Leader>t3 | Harpoon Terminal 3 |
+| <Leader>t4 | Harpoon Terminal 4 |
+|   |   |
