@@ -7,10 +7,19 @@ This is a non-exhaustive list. For futher remaps, see
 | Keys | Description |
 | --- | --- |
 | Leader | Space | Leader |
-| <td colspan=1>**Quicknav**</td> |
+
+**Quick Nav**
+
+| Keys | Description |
+| --- | --- |
+| <td colspan=1> **Quicknav**</td> |
 | <Leader>pv | Switch to file view |
 | <Leader>pf | Switch to fuzzy finder |
- <td colspan=1>**Harpoon**</td> 
+
+**Harpoon**
+
+| Keys | Description |
+| --- | --- |
 | <Leader>hh | Harpoon Dashboard |
 | <Leader>ha | Harpoon Mark Buffer |
 | <Leader>jj | Harpoon Next Marked Buffer |
@@ -23,4 +32,3 @@ This is a non-exhaustive list. For futher remaps, see
 | <Leader>t2 | Harpoon Terminal 2 |
 | <Leader>t3 | Harpoon Terminal 3 |
 | <Leader>t4 | Harpoon Terminal 4 |
-|   |   |
