@@ -53,3 +53,8 @@ then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 
+# Make sure that WSL has access to my dev folder
+if grep -qi microsoft /proc/version && [ -d "~/dev" ] 
+then
+    ln -s /mnt/c/Users/achyt/dev/ ~/
+fi
