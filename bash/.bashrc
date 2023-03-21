@@ -119,3 +119,7 @@ fi
 . "$HOME/.cargo/env"
 
 export PATH="$PATH:$HOME/bin:/home/zaphodious/.local/share/bob/nvim-bin"
+
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
