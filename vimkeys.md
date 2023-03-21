@@ -7,10 +7,10 @@ This is a non-exhaustive list. For futher remaps, see
 | Keys | Description |
 | --- | --- |
 | Leader | Space | Leader |
-| <td colspan=2>**Quicknav**</td> |
+ <td colspan=2>**Quicknav**</td> 
 | <Leader>pv | Switch to file view |
 | <Leader>pf | Switch to fuzzy finder |
-| <td colspan=2>**Harpoon**</td> |
+ <td colspan=2>**Harpoon**</td> 
 | <Leader>hh | Harpoon Dashboard |
 | <Leader>ha | Harpoon Mark Buffer |
 | <Leader>jj | Harpoon Next Marked Buffer |
