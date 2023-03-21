@@ -1,4 +1,4 @@
-# NeoVim Remaps
+# NeoVim Remaps 
 
 This is a non-exhaustive list. For futher remaps, see 
 ./nvim/.config/nvim/lua/zaph/remap.lua and files in
@@ -7,10 +7,10 @@ This is a non-exhaustive list. For futher remaps, see
 | Keys | Description |
 | --- | --- |
 | Leader | Space | Leader |
- <td colspan=2>**Quicknav**</td> 
+| <td colspan=1>**Quicknav**</td> |
 | <Leader>pv | Switch to file view |
 | <Leader>pf | Switch to fuzzy finder |
- <td colspan=2>**Harpoon**</td> 
+ <td colspan=1>**Harpoon**</td> 
 | <Leader>hh | Harpoon Dashboard |
 | <Leader>ha | Harpoon Mark Buffer |
 | <Leader>jj | Harpoon Next Marked Buffer |
