@@ -1,8 +1,8 @@
 # NeoVim Remaps 
 
 This is a non-exhaustive list. For futher remaps, see 
-[a relative link](nvim/.config/nvim/lua/zaph/remap.lua) and files in
-[a relative link](nvim/.config/nvim/after/plugin/)
+[nvim/remap.lua](nvim/.config/nvim/lua/zaph/remap.lua) and files in
+[nvim/after/plugin/](nvim/.config/nvim/after/plugin/)
 
 | Keys | Description |
 | --- | --- |
