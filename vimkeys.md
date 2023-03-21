@@ -4,12 +4,13 @@ This is a non-exhaustive list. For futher remaps, see
 ./nvim/.config/nvim/lua/zaph/remap.lua and files in
 ./nvim/.config/nvim/after/plugin/
 
-| Keys | Description |
-| --- | --- |
-| Space | Leader |
+| Category | Keys | Description |
+| --- | --- | --- |
+| Leader | Space | Leader |
+| **Quicknav** |||
 | <Leader>pv | Switch to file view |
 | <Leader>pf | Switch to fuzzy finder |
-| ---  | --- |
+| Harpoon |||
 | <Leader>hh | Harpoon Dashboard |
 | <Leader>ha | Harpoon Mark Buffer |
 | <Leader>jj | Harpoon Next Marked Buffer |
