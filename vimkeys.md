@@ -15,6 +15,27 @@ This is a non-exhaustive list. For futher remaps, see
 | `<Leader>pv` | Switch to file view |
 | `<Leader>pf` | Switch to fuzzy finder |
 
+**Splits Management**
+
+| Keys | Description |
+| --- | --- |
+| `<Leader>ww` | Split Vertically |
+| `<Leader>we` | Split Horizontally |
+| `<Leader>wx` | Close Pane |
+| `<Leader>wr` | Resize current pane to 80 characters |
+| `<Leader>w=` | Resize all panes to be equal in size |
+| `<Tab>l` | Move to pane ⇒ |
+| `<Tab>k` | Move to pane ⇑ |
+| `<Tab>j` | Move to pane ⇓ |
+| `<Tab>h` | Move to pane ⇐ |
+
+**[Trouble](https://github.com/folke/trouble.nvim)**
+
+| Keys | Description |
+| --- | --- |
+| `<Leader>tt` | Toggle Trouble |
+| `<Leader>tr` | Toggle Refresh |
+ 
 **Harpoon**
 
 | Keys | Description |

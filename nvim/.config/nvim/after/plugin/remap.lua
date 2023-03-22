@@ -28,3 +28,13 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
+vim.keymap.set("n", "<leader>ww", "<C-w>v")
+vim.keymap.set("n", "<leader>we", "<C-w>n")
+vim.keymap.set("n", "<leader>wx", "<C-w>q")
+vim.keymap.set("n", "<leader>wr", "<C-w>80|")
+vim.keymap.set("n", "<leader>w=", "<C-w>=")
+vim.keymap.set("n", "<tab>l", "<C-w>l")
+vim.keymap.set("n", "<tab>k", "<C-w>k")
+vim.keymap.set("n", "<tab>j", "<C-w>j")
+vim.keymap.set("n", "<tab>h", "<C-w>h")
+
