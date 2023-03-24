@@ -105,6 +105,13 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+alias nvim="~/.local/share/bob/nvim-bin/nvim"
+
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+alias n="nvim"
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -117,9 +124,4 @@ if ! shopt -oq posix; then
 fi
 
 . "$HOME/.cargo/env"
-
 export PATH="$PATH:$HOME/bin:/home/zaphodious/.local/share/bob/nvim-bin"
-
-alias vim="nvim"
-alias vi="nvim"
-alias v="nvim"
