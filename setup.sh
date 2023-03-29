@@ -120,3 +120,13 @@ then
         sudo apt upgrade -y
     fi
 fi
+
+# We need apt for these installations, hence the earlier update
+if command -v apt &> /dev/null
+then
+    echo "Installing fun things"
+        sudo apt install -y neofetch cowsay cmatrix &> /dev/null
+        cowsay "Alrighty, we're ready to rock!"
+        neofetch
+fi
+

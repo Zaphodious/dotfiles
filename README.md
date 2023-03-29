@@ -9,6 +9,10 @@ home directory is important.
 it will check to make sure it doesn't exist first. The script
 uses the nix package manager to get coverage on both Linux and Mac.
 
+If called with flag -b, it will run commands to fix a borked
+Pop! Shop (and presumably other borked apt-related things). Otherwise
+just apt updates and upgrades.
+
 Note that nix will install in single-user mode under WSL, and multi-user
 mode elsewhere.
 
