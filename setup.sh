@@ -28,6 +28,11 @@ then
 nix-env --install openjdk
 fi
 
+if ! command -v npm &> /dev/null
+then
+    nix-env --install nodejs
+fi
+
 if ! command -v gcc &> /dev/null && [[ $OSTYPE != 'darwin' ]];
 then
     nix-env --install gcc
