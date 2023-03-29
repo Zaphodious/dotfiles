@@ -11,7 +11,7 @@ uses the nix package manager to get coverage on both Linux and Mac.
 
 If called with flag -b, it will run commands to fix a borked
 Pop! Shop (and presumably other borked apt-related things). Otherwise
-just apt updates and upgrades.
+just apt updates and upgrades if apt is detected.
 
 Note that nix will install in single-user mode under WSL, and multi-user
 mode elsewhere.
