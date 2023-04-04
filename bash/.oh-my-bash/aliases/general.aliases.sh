@@ -51,14 +51,14 @@ alias cp='_omb_alias_general_cp_init'       # Preferred 'cp' implementation
 alias mv='_omb_alias_general_mv_init'       # Preferred 'mv' implementation
 alias mkdir='_omb_alias_general_mkdir_init' # Preferred 'mkdir' implementation
 
-function _omb_alias_general_nano_init {
-  if LANG=C command nano --help |& grep -q '^[[:space:]]*[-]W'; then
-    alias nano='nano -W' && function _omb_alias_general_nano_init { command nano -W "$@"; }
-  else
-    unalias nano 2>/dev/null; function _omb_alias_general_nano_init { command nano "$@"; }
-  fi &&
-    _omb_alias_general_nano_init "$@"
-}
+#function _omb_alias_general_nano_init {
+#  if LANG=C command nano --help |& grep -q '^[[:space:]]*[-]W'; then
+    #alias nano='nano -W' && function _omb_alias_general_nano_init { command nano -W "$@"; }
+#  else
+#    unalias nano 2>/dev/null; function _omb_alias_general_nano_init { command nano "$@"; }
+# fi &&
+#    _omb_alias_general_nano_init "$@"
+#}
 alias nano='_omb_alias_general_nano_init'   # Preferred 'nano' implementation
 
 alias ll='ls -lAFh'                         # Preferred 'ls' implementation

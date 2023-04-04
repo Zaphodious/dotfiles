@@ -36,4 +36,14 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 end)
 
+    
+
 lsp.setup()
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = true,
+})
