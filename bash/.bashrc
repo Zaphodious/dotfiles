@@ -30,7 +30,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Set up our prompt in a dedicated theme file
-source ./.bashtheme.sh
+source .bashtheme.sh
 
 
 # enable color support of ls and also add handy aliases
