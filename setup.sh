@@ -86,6 +86,12 @@ then
     bob use 0.8.3
 fi
 
+if ! command -v proompt &> /dev/null
+then
+    echo "Proompt not detected. Installing proompt"
+    cargo install --git https://github.com/Zaphodious/proompt.git
+fi
+
 # Install Packer
 if [ -d "~/.local/share/nvim/site/pack/packer/start" ] 
 then
