@@ -117,7 +117,8 @@ fi
 
 WNUTS="\w"
 THETIME="\t"
-USTRING="\u@\h"
+#USTRING="\u@\h"
+USTRING="\u@bistromath"
 
 function proomptme {
     PS1="$(proompt -i $EUID -c '󰣙' -s f76c59 07102e "${THETIME@P}" -s f04181 07102e " ${USTRING@P}" -s faaa5a 07102e "${WNUTS@P}")"
