@@ -121,7 +121,15 @@ THETIME="\t"
 USTRING="\u@bistromath"
 
 function proomptme {
-    PS1="$(proompt -i $EUID -c '󰣙' -s f76c59 07102e "${THETIME@P}" -s f04181 07102e " ${USTRING@P}" -s faaa5a 07102e "${WNUTS@P}")"
+    PS1="$(proompt -i $EUID -c '󰣙'\
+        -g "$(git status --porcelain=v2 --branch 2>&1)"\
+        -s f76c59 07102e "${THETIME@P}"\
+        -s f04181 07102e " ${USTRING@P}"\
+        -s faaa5a 07102e "${WNUTS@P}"\
+        --git-s committed 33984b 131313\
+        --git-s staged 0098dc 131313 \
+        --git-s unstaged ed7614 131313 \
+        )"
 }
 
 if [ "$color_prompt" = yes ]; then
