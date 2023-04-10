@@ -93,12 +93,6 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
-
-
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -115,39 +109,62 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# Detect which OS is being used.
+
+OS=""
+
+case "$(uname -sr)" in
+
+   Darwin*)
+       OS="MacOS"
+     ;;
+
+   Linux*Microsoft*)
+       OS="WSL"
+     ;;
+
+   Linux*)
+     OS="Linux"
+     ;;
+
+   CYGWIN*|MINGW*|MINGW32*|MSYS*)
+       OS="Windows"
+     ;;
+
+   *)
+   OS="Other"
+     ;;
+esac
+
+
 WNUTS="\w"
 THETIME="\t"
-#USTRING="\u@\h"
-USTRING="\u@bistromath"
+if [ $OS = "MacOS" ]
+then
+    USTRING="\u@bistromath"
+else
+    USTRING="\u@\h"
+fi
 
 function proomptme {
-    PS1="$(proompt -i $EUID -c '󰣙'\
+    PS1="$(proompt -i $EUID -c '🮲 🮳' f09432\
         -g "$(git status --porcelain=v2 --branch 2>&1)"\
-        -s f76c59 07102e "${THETIME@P}"\
-        -s f04181 07102e " ${USTRING@P}"\
-        -s faaa5a 07102e "${WNUTS@P}"\
-        --git-s committed 33984b 131313\
-        --git-s staged 0098dc 131313 \
-        --git-s unstaged ed7614 131313 \
-        )"
+        -t trains 640635\
+        -s fbd439 4b3409 "${THETIME@P}"\
+        -s f43666 440616 " ${USTRING@P}"\
+        -s c635bc 36052c "${WNUTS@P}"\
+        --git-s committed 26a630 063600\
+        --git-s staged 08a0c0 083040 \
+        --git-s unstaged dc532d 3c130d \
+        ) "
 }
 
+# If we're in a color prompt, use proompt
 if [ "$color_prompt" = yes ]; then
-    #PS1='$(proomptme)\a'
     PROMPT_COMMAND=proomptme
-
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    #PS1='$(doColS "e00080" "400080" "Proompto")'
 else
+    # If the prompt isn't colored, we want to use a dead simple prompt
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
