@@ -67,4 +67,5 @@ This is a non-exhaustive list. For futher remaps, see
 | `<Leader>s` | Replace text matches under cursor |
 | `<Leader>f` | Formats buffer using language server |
 | `<Leader>ss` | Packer Syncs |
+| `<Leader>rm` | Rename-refactors symbol in project (make sure to :wa afterword) |
 

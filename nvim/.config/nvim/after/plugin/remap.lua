@@ -38,3 +38,5 @@ vim.keymap.set("n", "<tab>k", "<C-w>k")
 vim.keymap.set("n", "<tab>j", "<C-w>j")
 vim.keymap.set("n", "<tab>h", "<C-w>h")
 
+vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true })
+
