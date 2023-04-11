@@ -10,6 +10,8 @@ function ColorMyPencils(color)
     --color = color or "vn-night"
     --color = color or "dracula"
     color = color or "calvera"
+    --color = color or "alabaster"
+    --color = "monokai_pro"
 
 	vim.cmd.colorscheme(color)
 

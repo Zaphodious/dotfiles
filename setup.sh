@@ -86,6 +86,18 @@ then
     bob use 0.8.3
 fi
 
+if ! command -v lsd &> /dev/null
+then 
+    echo "LSDeluxe not detected. Installing."
+    cargo install lsd
+fi
+
+if ! command -v vivid &> /dev/null
+then
+    echo "Vivid not detected. Installing."
+    cargo install vivid 
+fi 
+
 if ! command -v proompt &> /dev/null
 then
     echo "Proompt not detected. Installing proompt"

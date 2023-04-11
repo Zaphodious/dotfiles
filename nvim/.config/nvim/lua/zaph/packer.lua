@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
     use "nxvu699134/vn-night.nvim"
     use "Mofiqul/dracula.nvim"
     use "yashguptaz/calvera-dark.nvim"
+    use "p00f/alabaster.nvim"
+    use 'tanvirtin/monokai.nvim'
 
 
 
