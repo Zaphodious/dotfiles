@@ -25,7 +25,7 @@ function setup-os-vars {
     esac
 
     case $ARCH in
-        amd64*) ARCH='aarch64';;
+        arm64*) ARCH='aarch64';;
         x86_64*) ARCH='x86_64';;
     esac
 
@@ -46,14 +46,19 @@ function is-installed {
     which "$1" &> /dev/null
 }
 
-function if-needs-nix {
+function _cmd-arts-installed {
     COMMAND=$1
     PACKAGE=$2
     if [ -z "$PACKAGE" ]
     then
         PACKAGE=$COMMAND
     fi
-    if needs-installing $1
+    needs-installing $COMMAND
+
+}
+
+function if-needs-nix {
+    if _cmd-arts-installed $1 $2
     then
         echo -e "\e[40m\e[35mCommand '$COMMAND' not detected. Installing with nix\e[0m"
         nix-env --install $PACKAGE
@@ -61,13 +66,7 @@ function if-needs-nix {
 }
 
 function if-needs-cargo {
-    COMMAND=$1
-    PACKAGE=$2
-    if [ -z "$PACKAGE" ]
-    then
-        PACKAGE=$COMMAND
-    fi
-    if needs-installing $1
+    if _cmd-arts-installed $1 $2
     then
         echo -e "\e[40m\e[31mCommand '$COMMAND' not detected. Installing with cargo\e[0m"
         cargo install $PACKAGE
@@ -76,16 +75,17 @@ function if-needs-cargo {
 
 
 function install-zig {
-    echo "zig not installed. Installing."
+    if [ "$ARCH" = "" ]
+    then
+        setup-os-vars
+    fi
     zig_json_path=".master[\"${ARCH}-${OS}\"].tarball"
-    echo $zig_json_path
     mkdir -p ~/bin
     rm -rf ./zigtmp
     mkdir -p ./zigtmp/bin
     # curl $tarball_url -o ./zigtmp/zig.tar.xz
     if curl "https://ziglang.org/download/index.json" | jq -r ".master[\"$ARCH-$OS\"].tarball" | xargs curl -o "./zigtmp/zig.tar.xz" 
     then
-        echo "we did it!"
         tar -xf ./zigtmp/zig.tar.xz -C ./zigtmp/bin/
         d=$(cd zigtmp/bin;echo *)
         mv "./zigtmp/bin/$d" ./zigtmp/bin/zigfiles

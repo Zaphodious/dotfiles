@@ -17,8 +17,10 @@ then
         sh <(curl -L https://nixos.org/nix/install) --daemon
     fi
     . ~/.nix-profile/etc/profile.d/nix.sh
-    echo "Reload the shell and then run setup.sh once again"
-    exit 3 # We can go no further until the shell has been reloaded
+    #echo "Reload the shell and then run setup.sh once again"
+    #We need to run the script again, now that nix is installed 
+    ./setup.sh
+    exit 0 # We can go no further until the shell has been reloaded
 fi
 
 # Install stuff we need
@@ -47,7 +49,9 @@ then
     echo "Rust not detected. Installing." 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     echo "Reload the shell and then run setup.sh once again"
-    echo 3
+    # Like with nix, we need to run this again
+    ./setup.sh
+    exit 0
 else
     echo "Rust detected. Running rustup update." 
     rustup update
@@ -73,7 +77,7 @@ then
 fi
 
 # If we've got apt, we want to update it.
-if is-installed apt
+if is-installed apt && [ $OS != "macos" ]
 then
     if [ popshop_is_borked == true ]
     then
