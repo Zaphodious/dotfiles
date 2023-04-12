@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 
-# Get flags
-while getopts b: flag 
-do 
-    case "${flag}" in 
-    b) popshop_is_borked=true;;
-esac
-done
+
+source ./setup_support.sh
+
+setup-parse-args
+setup-os-vars
 
 # Set up nix
-if ! command -v nix-env &> /dev/null
+if needs-installing nix-env 
 then
     echo "Nix not detected. Installing." 
-    if grep -qi microsoft /proc/version
+    if $IS_WSL
     then
         sh <(curl -L https://nixos.org/nix/install) --no-daemon
     else
@@ -24,85 +22,41 @@ then
 fi
 
 # Install stuff we need
-if ! command -v stow &> /dev/null
+
+if [ $OS != 'macos' ]
 then
-    echo "Stow not detected. Installing." 
-    nix-env --install stow
+    if-needs-nix gcc
 fi
 
-if ! command -v curl &> /dev/null
+if-needs-nix jq
+if-needs-nix python3
+if-needs-nix npm
+if-needs-nix curl
+if-needs-nix stow
+if-needs-nix javac openjdk
+
+if needs-installing zig
 then
-    echo "curl not detected. Installing." 
-    nix-env --install curl
+    install-zig
 fi
 
-if ! command -v javac &> /dev/null
-then
-    echo "OpenJDK not detected. Installing." 
-    nix-env --install openjdk
-fi
+if-needs-nix git
 
-if ! command -v npm &> /dev/null
-then
-    echo "Node not detected. Installing." 
-    nix-env --install nodejs
-fi
-
-if ! command -v gcc &> /dev/null && [[ $OSTYPE != 'darwin' ]];
-then
-    echo "GCC not detected. Installing." 
-    nix-env --install gcc
-fi
-
-if ! command -v python3 &> /dev/null
-then
-    echo "Python3 not detected. Installing." 
-    nix-env --install python3
-fi
-
-if ! command -v git &> /dev/null
-then
-    echo "Git not detected... somehow. Huh. Installing." 
-    nix-env --install git
-fi
-
-if ! command -v cargo &> /dev/null
+if needs-installing cargo
 then
     echo "Rust not detected. Installing." 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     echo "Reload the shell and then run setup.sh once again"
     echo 3
 else
-    #DejaVu Sans Mono Book
     echo "Rust detected. Running rustup update." 
     rustup update
 fi
 
-if ! command -v bob &> /dev/null
-then
-    echo "Bob not detected. Installing, then installing neovim 0.8.3" 
-    cargo install bob-nvim
-    bob install 0.8.3
-    bob use 0.8.3
-fi
-
-if ! command -v lsd &> /dev/null
-then 
-    echo "LSDeluxe not detected. Installing."
-    cargo install lsd
-fi
-
-if ! command -v vivid &> /dev/null
-then
-    echo "Vivid not detected. Installing."
-    cargo install vivid 
-fi 
-
-if ! command -v proompt &> /dev/null
-then
-    echo "Proompt not detected. Installing proompt"
-    cargo install --git https://github.com/Zaphodious/proompt.git
-fi
+if-needs-cargo bob bob-nvim
+if-needs-cargo lsd
+if-needs-cargo vivid
+if-needs-cargo proompt "--git https://github.com/Zaphodious/proompt.git"
 
 # Install Packer
 if [ -d "~/.local/share/nvim/site/pack/packer/start" ] 
@@ -112,16 +66,15 @@ then
 fi
 
 # Make sure that WSL has access to my dev folder
-if grep -qi microsoft /proc/version && [ -d "~/dev" ] 
+if $IS_WSL && [ -d "~/dev" ] 
 then
     echo "WSL detected. Symlinking Alex's dev folder."
     ln -s /mnt/c/Users/achyt/dev/ ~/
 fi
 
 # If we've got apt, we want to update it.
-if command -v apt &> /dev/null
+if is-installed apt
 then
-
     if [ popshop_is_borked == true ]
     then
         echo "If Pop! Shop is borked, we need to clean some stuff up"
@@ -137,14 +90,12 @@ then
         sudo apt update -y
         sudo apt upgrade -y
     fi
+
+    echo "Installing fun things"
+    sudo apt install -y neofetch cowsay cmatrix &> /dev/null
+    cowsay "Alrighty, we're ready to rock!"
+    neofetch
+
 fi
 
-# We need apt for these installations, hence the earlier update
-if command -v apt &> /dev/null
-then
-    echo "Installing fun things"
-        sudo apt install -y neofetch cowsay cmatrix &> /dev/null
-        cowsay "Alrighty, we're ready to rock!"
-        neofetch
-fi
 

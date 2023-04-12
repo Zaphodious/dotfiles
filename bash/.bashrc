@@ -86,7 +86,9 @@ if ! shopt -oq posix; then
 fi
 
 . "$HOME/.cargo/env"
-export PATH="$PATH:$HOME/bin:/home/zaphodious/.local/share/bob/nvim-bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+export PATH="$PATH:$HOME/dotfiles/zigtmp/bin/zigfiles/"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 
