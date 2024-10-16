@@ -5,7 +5,7 @@ in
 {
 
  imports = [
- 	./profiles/dev
+ 	./modules/dev
  ];
 
  options = {
