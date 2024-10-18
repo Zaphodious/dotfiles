@@ -30,7 +30,7 @@
       # # You can also create simple shell scripts directly inside your
       # # configuration. For example, this adds a command 'my-hello' to your
       # # environment:
-       (pkgs.writeShellScriptBin "nix-switch" ''sudo nixos-rebuild switch --flake /etc/nixos?submodules=1#default'')
+      # (pkgs.writeShellScriptBin "nix-switch" ''sudo nixos-rebuild switch --flake /etc/nixos?submodules=1#default'')
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
